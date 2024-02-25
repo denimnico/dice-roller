@@ -15,3 +15,17 @@ function dice() {
   document.getElementById("winner").innerHTML = msg;
   
 }
+
+async function fetchGenerateNum1To6() {
+  const url = "https://dice-roller-nodejs.azurewebsites.net//generateNum1To6";
+
+  for (i = 1; i < 3; i++) {
+      const response = await fetch(url);
+      const responseText = await response.text();
+      console.log(response);
+      console.log(responseText);
+      document.getElementById("die" + i).value = responseText;
+  }
+
+  dice();
+}
