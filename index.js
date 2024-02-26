@@ -16,8 +16,8 @@ function dice() {
   
 }
 
-async function fetchGenerateNum1To6() {
-  const url = "https://dice-roller-nodejs.azurewebsites.net//generateNum1To6";
+async function die() {
+  const url = "https://dice-roller-nodejs.azurewebsites.net//die";
 
   for (i = 1; i < 3; i++) {
       const response = await fetch(url);
